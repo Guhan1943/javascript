@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 1st program */
+        for (i=1;i<=100;i++)
+        {
+            if(i%3==0 && i%5==0)
+            {
+                console.log("FizzBuzz");
+            }
+            else if(i%5==0)
+            {
+                console.log("Buzz");
+            }
+            else if(i%3==0)
+            {
+                console.log("fizz");
+            }
+            else{
+                console.log(i);
+            }
+        }
+       //2nd program
+    let strRev="";
+    function palindrome(str)
+    {
+    for(let itr=str.length-1;itr>=0;itr--)
+    {
+        strRev+=str[itr]
+    }
+    if(str==strRev)
+    return ("Palindrome")
+    else
+    return "Not a Palindrome"
+    }
+    console.log(palindrome("malayalam"))
+
+
+
+        /* 3rd program*/
+       let max = 0;
+        let arr = [2,5,10,6];
+        
+        for(i=0;i<arr.length;i++)
+        {
+            if(arr[i]>max)
+            {
+                max = arr[i]
+            }
+        }
+       console.log(max);
+
+
+
+
+       /* 6th progran*/
+       
+       function fact(n)
+       {
+        if(n===0||n===1)
+        {
+            return 1;
+        }
+        return n * fact(n-1);
+       }
+       console.log(fact(5));
+
+       //4th program
+    function repeat(str){
+        for(let i=0;i<str.length;i++)
+        {
+            count=1;
+           for(let j=i+1;j<=str.length;j++)
+            {
+                if(str[i]===str[j])
+              
+                count++;
+            
+            } 
+            console.log(str[i]+":"+count);
+
+        
+        }
+
+    }
+    repeat("cricket");
+
+    
+       /*5th program*/
+       function large(str)
+       {
+        let count =0;
+        let max = 0;
+        let last =0;
+        for(i=0;i<str.length;i++)
+        {
+            count++;
+            if(str[i]==" ")
+            {
+                if(count > max)
+                { 
+                    last = str[i]
+                    max = count;
+                     count=0;
+                }
+            }
+        }
+        return  max;
+       }
+       console.log(large("my name is guhan"));
+
+       //8th program
+    let arr1=[0,1,2,3,4,5,6,7,9,10];
+    let end=arr1[arr1.length-1];
+    for(let itr=0;itr<=end;itr++){
+        if(arr1[itr]!=itr){
+        console.log(itr);
+        break;
+        }
+    }
+    // 7th program
+     function fahrenheit(cel){
+         let fh=(9/5)*cel+32;
+         return fh;
+     }
+     console.log(fahrenheit(0));
+    </script>
+</body>
+</html>
